@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import display1 from "../../../../public/displaymen1.jpeg";
-import display2 from "../../../../public/displaymen2.jpeg";
-import display3 from "../../../../public/displaymen3.jpeg";
+import display1 from "../../../public/displaymen1.jpeg";
+import display2 from "../../../public/displaymen2.jpeg";
+import display3 from "../../../public/displaymen3.jpeg";
 
 function Display() {
   return (

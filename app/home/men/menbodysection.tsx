@@ -2,7 +2,7 @@ import React from "react";
 
 function BodySection() {
   return (
-    <section className="h-[50vh] w-full flex items-center px-[100px]">
+    <section className="h-[50vh] w-full flex items-center justify-center px-[100px]">
       <div className="text-[--primaryTiara] z-10">
         <div className="text-9xl flex font-semibold ubuntu-medium ">
           <h1 className="underline underline-offset-8">Uncover top</h1>

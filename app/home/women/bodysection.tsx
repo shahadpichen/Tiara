@@ -3,9 +3,9 @@ import { FiArrowDownRight } from "react-icons/fi";
 import { MdArrowRightAlt } from "react-icons/md";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Image from "next/image";
-import display1 from "../../../../public/women3.jpeg";
-import display2 from "../../../../public/women4.jpeg";
-import display3 from "../../../../public/women6.jpeg";
+import display1 from "../../../public/women3.jpeg";
+import display2 from "../../../public/women4.jpeg";
+import display3 from "../../../public/women6.jpeg";
 
 function BodySection() {
   return (

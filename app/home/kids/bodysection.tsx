@@ -1,7 +1,8 @@
 import React from "react";
 import { Sacramento } from "next/font/google";
 import Image from "next/image";
-import circle from "../../../../public/circle.png";
+import circle from "../../../public/circle.png";
+import Display from "./display";
 
 const sacramento = Sacramento({
   weight: "400",
@@ -11,8 +12,8 @@ const sacramento = Sacramento({
 
 function BodySection() {
   return (
-    <section className="h-[90vh] w-full flex justify-around items-center px-[100px] mb-[150px]">
-      <div className="absolute top-[20vh] text-[--tertiaryTiara] flex flex-col gap-10">
+    <section className="min-h-[90vh] w-full flex flex-col justify-around items-center px-[100px] mb-[150px] mt-[100px]">
+      <div className="top-[20vh] text-[--tertiaryTiara] flex flex-col gap-10">
         <h1
           className={`text-9xl font-semibold text-center relative ${sacramento.className}`}
         >
@@ -30,6 +31,7 @@ function BodySection() {
           />
         </h1>
       </div>
+      <Display />
     </section>
   );
 }

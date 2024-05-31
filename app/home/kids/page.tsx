@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../../../components/navbar";
-import BodySection from "../components/kids/bodysection";
+import BodySection from "./bodysection";
 import FooterSection from "../../../components/footersection";
 import OurProducts from "../../../components/productsection";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -16,29 +16,29 @@ import { toast } from "sonner";
 
 function Cart() {
   const [cartProduct, setCartProduct] = useState<any>(null);
-  useEffect(() => {
-    const fetchCartProduct = async () => {
-      try {
-        const { data: cartProduct } = await readProduct();
-        setCartProduct(cartProduct);
-      } catch (error) {
-        console.error("Error fetching cart product:", error);
-        toast("Error fetching cart product:", {
-          description: `${error}`,
-        });
-      }
-    };
-    fetchCartProduct();
-  }, [cartProduct]);
+
+  const fetchCartProduct = async () => {
+    try {
+      const { data: cartProduct } = await readProduct();
+      console.log(cartProduct);
+      setCartProduct(cartProduct);
+    } catch (error) {
+      console.error("Error fetching cart product:", error);
+      toast("Error fetching cart product:", {
+        description: `${error}`,
+      });
+    }
+  };
 
   return (
-    <Dialog>
+    <Dialog onOpenChange={(isOpen) => isOpen && fetchCartProduct()}>
       <DialogTrigger asChild>
         <div className="bg-red-500 flex justify-center items-center w-[40px] h-[50px] rounded-full">
           <TiShoppingCart className="text-xl text-[--tertiaryHome]" />
         </div>
       </DialogTrigger>
-      <DialogContent>
+
+      <DialogContent className="p-10 bg-[--backgroundTiara] text-[--primaryTiara]">
         <DialogHeader>
           <DialogTitle>Cart</DialogTitle>
           <DialogDescription>Here are the list of items</DialogDescription>

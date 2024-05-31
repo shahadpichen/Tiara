@@ -1,9 +1,9 @@
 import React from "react";
 import NavBar from "../../../components/navbar";
-import BodySection from "../components/men/menbodysection";
+import BodySection from "./menbodysection";
 import FooterSection from "../../../components/footersection";
 import OurProducts from "../../../components/productsection";
-import Display from "../components/men/display";
+import Display from "./display";
 import { useParams } from "next/navigation";
 
 function MenCollection() {
